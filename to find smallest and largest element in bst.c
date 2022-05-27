@@ -34,7 +34,7 @@ void main() {
 		}
 	}
 }
-/* creating temporary node */
+
 N* new(int data) {
 	N* temp = (N*)malloc(sizeof(N));
 	temp->value = data;
@@ -42,7 +42,7 @@ N* new(int data) {
 	temp->r = NULL;
 	return(temp);
 }
-/* Creating the binary search tree */
+
 void create() {
 	root = new(40);
 	root->l = new(20);
@@ -52,7 +52,7 @@ void create() {
 	root->r->r = new(80);
 	root->r->r->r = new(90);
 }
-/* To display preorder traversal of the tree */
+
 void preorder(N *temp) {
 	printf("%d->", temp->value);
 	if (temp->l != NULL)
@@ -60,7 +60,7 @@ void preorder(N *temp) {
 	if (temp->r != NULL)
 	        preorder(temp->r);
 }
-/* TO find the minimum and maximum values in the given tree */
+
 void min_max(N *temp) {
 	while (temp->l != NULL)
 	        temp = temp->l;
